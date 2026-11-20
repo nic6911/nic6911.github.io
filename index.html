@@ -3,69 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Work</title>
+    <title>gnh.dk</title>
+    <meta name="description" content="A few of my projects and where to find me.">
+    <link rel="icon" href="graphics/og-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="gnh.dk">
+    <meta property="og:description" content="A few of my projects and where to find me.">
+    <meta property="og:url" content="https://gnh.dk/">
+    <meta property="og:image" content="https://gnh.dk/graphics/og-icon.png">
     <style>
+        :root {
+            --bg: #fafafa;
+            --fg: #1a1a1a;
+            --muted: #6b6b6b;
+            --accent: #0b6bcb;
+            --rule: #e2e2e2;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #141414;
+                --fg: #e8e8e8;
+                --muted: #9a9a9a;
+                --accent: #6aaef0;
+                --rule: #2a2a2a;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background: url('https://via.placeholder.com/1500') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .page {
+            max-width: 460px;
+            margin: 0 auto;
+            padding: 56px 24px;
         }
+
         h1 {
-            color: #007BFF;
+            margin: 0 0 6px;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
+        .intro {
+            margin: 0 0 36px;
+            color: var(--muted);
+        }
+
         ul {
-            list-style-type: none;
+            list-style: none;
+            margin: 0;
             padding: 0;
         }
         li {
-            margin: 10px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border-bottom: 1px solid var(--rule);
         }
         a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 14px;
+            padding: 12px 0;
+            color: var(--fg);
+            text-decoration: none;
         }
         a:hover {
-            text-decoration: underline;
+            color: var(--accent);
+        }
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
         .icon {
-            margin-right: 8px;
-            height: 2em;
-            width: auto;
-            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            flex: none;
+            object-fit: contain;
+        }
+
+        footer {
+            margin-top: 44px;
+            font-size: 14px;
+            color: var(--muted);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Not much to see here!</h1>
-        <p>But you can see some of my work and find me here:</p>
+    <div class="page">
+        <h1>gnh.dk</h1>
+        <p class="intro">A few of my projects and where to find me.</p>
+
         <ul>
-            <li><a href="https://youtube.com/user/wan46696"><img src="https://raw.githubusercontent.com/nic6911/nic6911.github.io/main/graphics/youtube.png" alt="YouTube" class="icon">YouTube</a></li>
-            <li><a href="https://www.instructables.com/member/nicengineering/"><img src="https://raw.githubusercontent.com/nic6911/nic6911.github.io/main/graphics/instructables.png" alt="Instructables" class="icon">Instructables</a></li>
-            <li><a href="https://github.com/nic6911"><img src="https://raw.githubusercontent.com/nic6911/nic6911.github.io/main/graphics/github.png" alt="GitHub" class="icon">GitHub</a></li>
-            <li><a href="https://makerworld.com/en/@nic6911"><img src="https://raw.githubusercontent.com/nic6911/nic6911.github.io/main/graphics/og-icon.png" alt="MakerWorld" class="icon">MakerWorld</a></li>
-            <li><a href="https://www.linkedin.com/in/mnicolaisen/"><img src="https://raw.githubusercontent.com/nic6911/nic6911.github.io/main/graphics/linkedin.png" alt="LinkedIn" class="icon">LinkedIn</a></li>
+            <li><a href="https://youtube.com/user/wan46696"><img src="graphics/youtube.png" alt="" class="icon">YouTube</a></li>
+            <li><a href="https://www.instructables.com/member/nicengineering/"><img src="graphics/instructables.png" alt="" class="icon">Instructables</a></li>
+            <li><a href="https://github.com/nic6911"><img src="graphics/github.png" alt="" class="icon">GitHub</a></li>
+            <li><a href="https://makerworld.com/en/@nic6911"><img src="graphics/og-icon.png" alt="" class="icon">MakerWorld</a></li>
+            <li><a href="https://www.linkedin.com/in/mnicolaisen/"><img src="graphics/linkedin.png" alt="" class="icon">LinkedIn</a></li>
         </ul>
+
+        <footer>gnh.dk 2026</footer>
     </div>
 </body>
 </html>
